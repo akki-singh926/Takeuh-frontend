@@ -1,11 +1,11 @@
 import React from 'react';
 
-const CalendarHeader = ({ month, year }) => (
-  <header className="locked-header relative w-full overflow-hidden bg-gray-200">
+const CalendarHeader = ({ month, year, img }) => (
+  <header className="relative w-full h-48 md:h-64 flex-shrink-0 overflow-hidden">
     <img 
-      src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b" 
-      alt="Mountain climber" 
-      className="w-full h-full object-cover object-center"
+      src={img} 
+      alt={month} 
+      className="w-full h-full object-cover transition-opacity duration-500"
     />
     <div 
       className="absolute bottom-0 right-0 bg-blue-600 text-white p-6 pl-12 shadow-lg z-10" 
