@@ -79,4 +79,4 @@ This project is provided as-is. Add a license file if you intend to share or pub
 
 ---
 
-If you'd like, I can also add a short screenshot, a demo GIF, or publish instructions for GitHub Pages/Vercel.
+
