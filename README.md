@@ -69,6 +69,21 @@ npm run lint
 - The app persists notes per day in the browser using the `useLocalStorage` hook. Clear site data to reset.
 - Tailwind is listed in `devDependencies`; if you add custom Tailwind config, ensure PostCSS is configured.
 
+## Deployment
+
+- Live demo: https://lighthearted-nougat-226f6e.netlify.app
+
+## About this project
+
+This small app demonstrates a focused, component-driven approach to building a calendar UI. It includes a header for month navigation, a grid that lays out days for the current month, individual `DayCell` components that handle selection and visual states, and a `NotesPanel` where users can add short text notes for a selected day. Notes are saved to the browser via the `useLocalStorage` hook to keep the demo simple and self-contained.
+
+Why these choices:
+
+- React + Vite: fast iteration during development and a lightweight production build.
+- Component decomposition: keeps UI logic isolated and testable (`CalendarHeader`, `CalendarGrid`, `DayCell`, `NotesPanel`).
+- `useLocalStorage` persistence: simple, zero-backend persistence suitable for a challenge/demo app.
+- Tailwind (dev): quick, utility-first styling without heavy CSS setup.
+
 ## Contributing
 
 Contributions and improvements welcome—open a PR or an issue describing the change.
@@ -78,5 +93,4 @@ Contributions and improvements welcome—open a PR or an issue describing the ch
 This project is provided as-is. Add a license file if you intend to share or publish.
 
 ---
-
 
