@@ -1,16 +1,82 @@
-# React + Vite
+# Calendar Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React + Vite single-page app that renders a monthly calendar grid with selectable days and persistent notes.
 
-Currently, two official plugins are available:
+**Quick links**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Live locally: `npm run dev`
+- Source: [src](src)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Interactive calendar grid with day selection
+- Add and persist notes per day using localStorage (see [src/hooks/useLocalStorage.js](src/hooks/useLocalStorage.js))
+- Modular components: header, grid, day cell, and notes panel
+- Built with Vite for fast dev feedback
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite
+- Tailwind CSS (postcss)
+- ESLint
+
+## Project Structure
+
+- [src/main.jsx](src/main.jsx) — app entry
+- [src/App.jsx](src/App.jsx) — root component
+- [src/components/CalendarHeader.jsx](src/components/CalendarHeader.jsx) — month navigation and title
+- [src/components/CalendarGrid.jsx](src/components/CalendarGrid.jsx) — main calendar layout
+- [src/components/DayCell.jsx](src/components/DayCell.jsx) — individual day cell
+- [src/components/NotesPanel.jsx](src/components/NotesPanel.jsx) — add/view notes for selected day
+- [src/constants/calendarData.js](src/constants/calendarData.js) — calendar helper data
+- [src/hooks/useLocalStorage.js](src/hooks/useLocalStorage.js) — simple persistence hook
+
+## Getting Started
+
+1. Install dependencies
+
+```bash
+npm install
+```
+
+2. Run the development server
+
+```bash
+npm run dev
+```
+
+3. Build for production
+
+```bash
+npm run build
+```
+
+4. Preview a production build locally
+
+```bash
+npm run preview
+```
+
+5. Lint the project
+
+```bash
+npm run lint
+```
+
+## Notes
+
+- The app persists notes per day in the browser using the `useLocalStorage` hook. Clear site data to reset.
+- Tailwind is listed in `devDependencies`; if you add custom Tailwind config, ensure PostCSS is configured.
+
+## Contributing
+
+Contributions and improvements welcome—open a PR or an issue describing the change.
+
+## License
+
+This project is provided as-is. Add a license file if you intend to share or publish.
+
+---
+
+If you'd like, I can also add a short screenshot, a demo GIF, or publish instructions for GitHub Pages/Vercel.
